@@ -8,6 +8,14 @@ df = pd.DataFrame({
     'age': [25, 30, 35, 28, 32],
     'salary': [50000, 60000, 75000, 65000, 70000]
 })
+# Add one extra row to df
+new_row = pd.DataFrame({
+    'id': [6],
+    'name': ['Frank'],
+    'age': [29],
+    'salary': [62000]
+})
+df = pd.concat([df, new_row], ignore_index=True)
 
 # Create data folder if it doesn't exist
 os.makedirs('data', exist_ok=True)
