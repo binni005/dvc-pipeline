@@ -17,6 +17,15 @@ new_row = pd.DataFrame({
 })
 df = pd.concat([df, new_row], ignore_index=True)
 
+#one more row
+another_row = pd.DataFrame({
+    'id': [7],
+    'name': ['Grace'],
+    'age': [31],
+    'salary': [68000]
+})
+df = pd.concat([df, another_row], ignore_index=True)
+
 # Create data folder if it doesn't exist
 os.makedirs('data', exist_ok=True)
 
